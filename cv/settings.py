@@ -54,7 +54,9 @@ ROOT_URLCONF = 'cv.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'views'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

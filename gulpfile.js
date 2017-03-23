@@ -18,7 +18,7 @@ function compile_js() {
     return gulp.src('./resources/assets/js/app.js')
         .pipe(plumber())
         .pipe(webpack(require('./webpack.config.js')))
-        .pipe(gulp.dest('./public/js'));
+        .pipe(gulp.dest('./static/js'));
 }
 
 function compile_sass() {
