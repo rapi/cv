@@ -7,11 +7,17 @@ module.exports= class Log{
         this.db= new (require('./logDb'))()
     }
     info(what){
-        let str="[Info]";
+        this.write('[Info]',what)
+    } 
+    error(what){
+        this.write('[ERROR]',what)
+    }   
+    write(status,text){
+        let str=status;
         str+="["+((new Date).toISOString().slice(0,19))+"]  ";
-        str+=what;
+        str+=text;
         if(this.in_file)this.file.save(str)
         if(this.in_console)console.log(str)
         if(this.in_db)this.db.save(str)
-    }    
+    }
 }

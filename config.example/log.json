@@ -1,0 +1,6 @@
+{
+    "in_file":true,
+    "in_console":true,
+    "in_db":true,
+    "files":"logs"
+}

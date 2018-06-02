@@ -1,1 +1,0 @@
-module.exports.watch=new(require('./watch'))()
